@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo -e "\nUsage: sudo $0 <rootfs.ubi name> \n"
+	echo -e "Example: sudo $0 gumstix-console-image-overo.ubi\n"
+	exit 1
+fi
+
+echo -e "\ncopying rootfs..."
+	sudo cp $1 /media/boot/rootfs.ubi
+
+echo -e "copying script to flash NAND...\n"
+	mkimage -A arm -O linux -T script -C none -a 0 -e 0 -n "flash-all" -d ./Scripts/flash-all.cmd ./Scripts/flash-all.scr
+	sudo cp ./Scripts/flash-all.scr /media/boot/flash-all.scr

@@ -1,0 +1,7 @@
+fatload mmc 0 $loadaddr MLO
+nandecc hw
+nand erase 0 80000
+nand write $loadaddr 0 20000
+nand write $loadaddr 20000 20000
+nand write $loadaddr 40000 20000
+nand write $loadaddr 60000 20000

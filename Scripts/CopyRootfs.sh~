@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo -e "\nUsage: sudo $0 <rootfs.ubi name> \n"
+	echo -e "Example: sudo $0 gumstix-console-image-overo.ubi\n"
+	exit 1
+fi
+
+echo -e "\ncopying rootfs..."
+	sudo cp $1 /media/rootfs/rootfs-overo.ubi
+
+echo -e "copying script to erase NAND in /media/rootfs...\n"
+	sudo cp EraseNAND.sh /media/rootfs/
