@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# usage:   sudo ./GenereBootableSD.sh <device>\n"
-# Example: sudo ./GenereBootableSD.sh sdc\n"
+# usage:   sudo ./GenereBootableSD.sh <device>
+# Example: sudo ./GenereBootableSD.sh sdc
 #
 # Before running this script please make sure that it is the good device:
 # 	Check with: 
