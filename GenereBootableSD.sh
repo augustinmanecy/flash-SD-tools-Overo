@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# usage:   sudo ./GenereBootableSD.sh <device>\n"
+# Example: sudo ./GenereBootableSD.sh sdc\n"
+#
 # Before running this script please make sure that it is the good device:
 # 	Check with: 
 #			sudo fdisk -l /dev/<device>
