@@ -89,17 +89,6 @@ echo -e "\nCopying necessary files to flash NAND in $ImagePath"
 			echo "unable to copy rootfs.ubi on /media/rootfs/$ImagePath/..."
 			exit 1
 		fi	
-		sudo cp -v rootfs-bb.ubi /media/rootfs/$ImagePath/rootfs-bb.ubi
-		if [ ! -e "/media/rootfs/$ImagePath/rootfs.ubi" ]; then
-			echo "unable to copy rootfs-bb.ubi on /media/rootfs/$ImagePath/..."
-			exit 1
-		fi	
-		sudo cp ./Scripts/FlashNand2.sh /media/rootfs/$ImagePath/FlashNand2.sh
-		if [ ! -e "/media/rootfs/$ImagePath/rootfs.ubi" ]; then
-			echo "unable to copy rootfs-bb.ubi on /media/rootfs/$ImagePath/..."
-			exit 1
-		fi	
-		sudo chmod +x /media/rootfs/$ImagePath/FlashNand2.sh
 	sync
 
 echo -e "\nWaiting pending copies before unmount SD card..."
